@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kneat.Starwars.Infrastructure\Kneat.Starwars.Infrastructure.csproj" />
+    <ProjectReference Include="..\Kneat.Starwars.Repositories\Kneat.Starwars.Repositories.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>
