@@ -23,7 +23,7 @@ You can run the test individually of on the root folder by executing the follow 
 #### Mega lights consumimable calculation: explanation
 For this project the consumable calculation uses the consume type that returns from each Starship. Based on this parameter, there is a interface ```IHoursCalculation``` that implements the proper type via Dependency injection to the concrete class byu using Func, the interface ```IHoursCalculation``` can implement multiple classes.
 
-For example: Starship: Millennium Falcon has consumables equals "2 months", that means it will call the concrete class that returns number of hours by Mounth. This formula applies the number of days considering an average in relation of 365 days.
+For example: Starship: Millennium Falcon has consumables equals "2 months", that means it will call the concrete class that returns number of hours by Month. This formula applies the number of days considering an average in relation of 365 days.
 
 The concrete class ```HoursPerMonth``` is implemented by the configuration of Dependecy injection:
 ```c#
