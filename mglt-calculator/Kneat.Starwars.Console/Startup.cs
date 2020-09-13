@@ -24,27 +24,8 @@ namespace Kneat.Starwars.Console
             services.RegisterToServices();
             services.RegisterToRepositories();
             services.RegisterToInfrastructure();
-
-            services.AddTransient<Func<string, IHoursCalculation>>(serviceProvider => timeType =>
-            {
-                switch (timeType.ToUpper())
-                {
-                    case "DAY":  
-                    case "DAYS":  
-                        return serviceProvider.GetService<HoursPerDay>();
-                    case "WEEK": 
-                    case "WEEKS": 
-                        return serviceProvider.GetService<HoursPerWeek>();
-                    case "MONTH":
-                    case "MONTHS":
-                        return serviceProvider.GetService<HoursPerMonth>();
-                    case "YEAR":
-                    case "YEARS":
-                        return serviceProvider.GetService<HoursPerYear>();
-                    default:
-                        return serviceProvider.GetService<UnknowTime>();
-                }
-            });
+            services.RegisterToConsumables();
+            
         }
     }
 }
