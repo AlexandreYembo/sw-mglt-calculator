@@ -38,6 +38,7 @@ services.AddTransient<Func<string, IHoursCalculation>>(serviceProvider => timeTy
             }
 }
 ```
+where ```serviceProvider``` is reponsible to call the method GetService, to create the instance of ```HourPerMonth``` and timeType is the string that returns from the property ```Consumables```.
 
 #### Code covered
 The unit test is covering the code for the Hour calculation by day, week, month and year. Also there is covering for API client, MGLT calculation and the StarshipsService.
