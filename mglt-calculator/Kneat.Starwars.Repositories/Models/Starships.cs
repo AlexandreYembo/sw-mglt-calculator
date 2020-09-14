@@ -8,6 +8,8 @@ namespace Kneat.Starwars.Repositories.Models
         public string Name { get; set; }
         public string Consumables { get; set; }
         public string MGLT { get; set; }
+        public string Model { get; set; }
+        public string Manufacturer { get; set; }
         public double Stops { get; protected set; }
 
         /// <summary>
