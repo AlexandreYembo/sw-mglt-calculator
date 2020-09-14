@@ -8,7 +8,6 @@ You can clone from this repository by using the command:
 ### Requirements
 .Net core 3.1
 
-
 #### How to run the project
 Once  you've got the source code, you can run the project by navigating to the folder Kneat.Starwars.Console then you simply run the command:
 ```dotnet run```
@@ -21,6 +20,16 @@ You can run the test individually of on the root folder by executing the follow 
 ```dotnet test```
 
 #### Mega lights consumimable calculation: explanation
+To calculate the stops it is necessary to provide the distance in Megalights, time consumable and the velocity in megaligth of the starship.
+
+The formula is defined by:
+``` stop = hours / consumable Hours ```
+
+Where: hours is (distance / velocity in megalights) and consumable Hours is the hours calculated by the consumable of the starship.
+
+Example:
+```stops = ((Distane=1000 / MGLT = 70) / 730 (consumable = "1 month")) ```
+
 For this project the consumable calculation uses the consume type that returns from each Starship. Based on this parameter, there is a interface ```IHoursCalculation``` that implements the proper type via Dependency injection to the concrete class byu using Func, the interface ```IHoursCalculation``` can implement multiple classes.
 
 For example: Starship: Millennium Falcon has consumables equals "2 months", that means it will call the concrete class that returns number of hours by Month. This formula applies the number of days considering an average in relation of 365 days.
