@@ -28,7 +28,7 @@ The formula is defined by:
 Where: hours is (distance / velocity in megalights) and consumable Hours is the hours calculated by the consumable of the starship.
 
 Example:
-```stops = ((Distane=1000 / MGLT = 70) / 730 (consumable = "1 month")) ```
+```stops = ((Distance=1000 / MGLT = 70) / 730 (consumable = "1 month")) ```
 
 For this project the consumable calculation uses the consume type that returns from each Starship. Based on this parameter, there is a interface ```IHoursCalculation``` that implements the proper type via Dependency injection to the concrete class byu using Func, the interface ```IHoursCalculation``` can implement multiple classes.
 
